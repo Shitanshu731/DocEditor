@@ -22,6 +22,7 @@ import React from "react";
 
 import FloatingToolbarPlugin from "./plugins/FloatingToolbarPlugin";
 import { useThreads } from "@liveblocks/react/suspense";
+import { liveblocksConfig } from "@liveblocks/react-lexical";
 // import Comments from "../Comments";
 // import { DeleteModal } from "../DeleteModal";
 
@@ -37,7 +38,7 @@ export function Editor() {
   // const status = useEditorStatus();
   // const { threads } = useThreads();
 
-  const initialConfig = {
+  const initialConfig = liveblocksConfig({
     namespace: "Editor",
     nodes: [HeadingNode],
     onError: (error: Error) => {
@@ -45,7 +46,7 @@ export function Editor() {
       throw error;
     },
     theme: Theme,
-  };
+  });
 
   return (
     <LexicalComposer initialConfig={initialConfig}>
