@@ -4,7 +4,7 @@ import { clerkClient } from "@clerk/nextjs/server";
 import { parseStringify } from "../utils";
 import { liveblocks } from "../liveblocks";
 
-export const getClerkuser = async ({ userIds }: { userIds: string[] }) => {
+export const getClerkusers = async ({ userIds }: { userIds: string[] }) => {
   try {
     const { data } = await clerkClient.users.getUserList({
       emailAddress: userIds,
