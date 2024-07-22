@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <div className="loader">
       <Image
-        src="/assets/icon/loader.svg"
+        src="/assets/icons/loader.svg"
         alt="loader"
         height={32}
         width={32}
