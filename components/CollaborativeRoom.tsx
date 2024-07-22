@@ -1,6 +1,6 @@
 "use client";
 import { ClientSideSuspense, RoomProvider } from "@liveblocks/react/suspense";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Loader from "./Loader";
 import { Editor } from "@/components/editor/Editor";
 import Header from "@/components/Header";
@@ -20,6 +20,17 @@ const CollaborativeRoom = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLDivElement>(null);
   const updateTitleHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {};
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
+        setEditing(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+  });
   return (
     <RoomProvider id={roomId}>
       <ClientSideSuspense fallback={<Loader />}>
@@ -38,6 +49,7 @@ const CollaborativeRoom = ({
                   onChange={(e) => setDocumentTitle(e.target.value)}
                   onKeyDown={updateTitleHandler}
                   disabled={!editing}
+                  className="text-black"
                 />
               ) : (
                 <p className="document-title">{documentTitle}</p>
