@@ -70,7 +70,7 @@ const Home = async () => {
       ) : (
         <div className="document-list-empty">
           <Image
-            src="/assets/icons/doc.svg"
+            src="/assets/icons/logo.jpg"
             alt="Document"
             width={40}
             height={40}
