@@ -10,8 +10,8 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: "liveDocs",
-  description: "Your go-to collabarative Editor",
+  title: "InstaDocs",
+  description: "This is a live Doc sharing Platdorm.",
 };
 
 export default function RootLayout({

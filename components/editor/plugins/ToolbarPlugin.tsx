@@ -123,7 +123,7 @@ export default function ToolbarPlugin() {
   }
 
   return (
-    <div className="toolbar" ref={toolbarRef}>
+    <div className="toolbar bg-black" ref={toolbarRef}>
       <button
         disabled={!canUndo}
         onClick={() => {
@@ -139,7 +139,7 @@ export default function ToolbarPlugin() {
         onClick={() => {
           editor.dispatchCommand(REDO_COMMAND, undefined);
         }}
-        className="toolbar-item"
+        className="toolbar-item "
         aria-label="Redo"
       >
         <i className="format redo" />
@@ -167,7 +167,7 @@ export default function ToolbarPlugin() {
         onClick={() => editor.update(() => toggleBlock("h3"))}
         data-active={activeBlock === "h3" ? "" : undefined}
         className={
-          "toolbar-item spaced " + (activeBlock === "h3" ? "active" : "")
+          "toolbar-item spaced" + (activeBlock === "h3" ? "active" : "")
         }
       >
         <i className="format h3" />

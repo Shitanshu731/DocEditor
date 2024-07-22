@@ -84,13 +84,13 @@ const CollaborativeRoom = ({
                   src="/assets/icons/edit.svg"
                   alt="edit"
                   width={24}
-                  className="pointer"
+                  className="pointer text-white"
                   onClick={() => setEditing(true)}
                   height={24}
                 />
               )}
               {currentUserType !== "editor" && !editing && (
-                <p className="view-only-tag">View only</p>
+                <p className="view-only-tag ">View only</p>
               )}
               {loading && <p className="text-sm text-gray-400 ">saving ...</p>}
             </div>

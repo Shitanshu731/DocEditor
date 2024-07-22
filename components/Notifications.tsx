@@ -35,7 +35,7 @@ const Notifications = () => {
           height={24}
         />
         {count > 0 && (
-          <div className="absolute right-2 top-2 z-20 size-2 rounded-full bg-blue-500" />
+          <div className="absolute right-2 top-2 z-20 size-2 rounded-full bg-green-400" />
         )}
       </PopoverTrigger>
       <PopoverContent align="end" className="shad-popover">
@@ -48,7 +48,7 @@ const Notifications = () => {
         >
           <InboxNotificationList>
             {unreadNotifications.length <= 0 && (
-              <p className="py-2 text-center text-dark-500">
+              <p className="py-2 text-center text-slate-300">
                 No new notifications
               </p>
             )}
@@ -80,7 +80,7 @@ const Notifications = () => {
                         {...props}
                         title={props.inboxNotification.activities[0].data.title}
                         aside={
-                          <InboxNotification.Icon className="bg-transparent">
+                          <InboxNotification.Icon className="bg-transparent ">
                             <Image
                               src={
                                 (props.inboxNotification.activities[0].data

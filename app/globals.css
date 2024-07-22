@@ -51,7 +51,7 @@
   }
 
   .shad-dialog {
-    @apply w-full max-w-[400px] rounded-xl border-none bg-doc bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
+    @apply w-full max-w-[400px] rounded-xl bg-gradient-to-br from-black to-green-800  border-none  bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
   }
 
   .shad-dialog button {
@@ -59,7 +59,7 @@
   }
 
   .shad-select {
-    @apply w-fit border-none bg-transparent text-blue-100 !important;
+    @apply w-fit border-none bg-transparent text-slate-400 !important;
   }
 
   .shad-select svg {
@@ -67,7 +67,7 @@
   }
 
   .shad-select-item {
-    @apply cursor-pointer bg-dark-200 text-blue-100 focus:bg-dark-300 hover:bg-dark-300 focus:text-blue-100 !important;
+    @apply cursor-pointer bg-black text-slate-400 focus:bg-green-800 hover:bg-green-800 focus:text-blue-100 !important;
   }
 
   .shad-popover {
@@ -83,7 +83,7 @@
   }
 
   .toolbar-wrapper {
-    @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
+    @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-slate-700 bg-black pl-3 pr-4 shadow-sm;
   }
 
   .editor-wrapper {
@@ -91,7 +91,7 @@
   }
 
   .header {
-    @apply min-h-[92px] min-w-full flex-nowrap bg-dark-100 flex w-full items-center justify-between gap-2 px-4;
+    @apply min-h-[92px] min-w-full flex-nowrap bg-gradient-to-br from-green-800 to-black shadow-2xl border-y-green-50 flex w-full items-center justify-between gap-2 px-4;
   }
 
   .document-list-container {
@@ -103,7 +103,7 @@
   }
 
   .document-list-item {
-    @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
+    @apply flex items-center justify-between gap-4 rounded-lg  bg-cover p-5 shadow-xl;
   }
 
   .document-list-empty {
@@ -119,7 +119,7 @@
   }
 
   .view-only-tag {
-    @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
+    @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-gray-400;
   }
 
   .collaborators-list {
@@ -127,7 +127,7 @@
   }
 
   .share-input {
-    @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply h-11 flex-1 border-none bg-gradient-to-br from-black to-gray-700 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .remove-btn {
@@ -135,7 +135,7 @@
   }
 
   .comments-container {
-    @apply mb-10 space-y-4 lg:w-fit flex w-full flex-col items-center justify-center;
+    @apply mb-10 space-y-4 lg:w-fit flex w-full flex-col items-center justify-center ;
   }
 
   .comment-composer {
@@ -143,7 +143,7 @@
   }
 
   .comment-thread {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px] transition-all;
+    @apply w-full max-w-[800px] border border-dark-300 shadow-sm lg:w-[350px] transition-all;
   }
 
   .loader {

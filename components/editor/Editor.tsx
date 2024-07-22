@@ -29,7 +29,9 @@ import { DeleteModal } from "../DeleteModal";
 // try to recover gracefully without losing user data.
 
 function Placeholder() {
-  return <div className="editor-placeholder">Enter some rich text...</div>;
+  return (
+    <div className="editor-placeholder text-white">Enter some rich text...</div>
+  );
 }
 
 export function Editor({
@@ -55,8 +57,8 @@ export function Editor({
 
   return (
     <LexicalComposer initialConfig={initialConfig}>
-      <div className="editor-container size-full">
-        <div className="toolbar-wrapper flex min-w-full justify-between">
+      <div className="editor-container size-full bg-black">
+        <div className="toolbar-wrapper flex min-w-full justify-between text-white">
           <ToolbarPlugin />
           {currentUserType === "editor" && <DeleteModal roomId={roomId} />}
         </div>
@@ -64,7 +66,7 @@ export function Editor({
           {status === "not-loaded" || status === "loading" ? (
             <Loader />
           ) : (
-            <div className="editor-inner min-h-[1100px] relative mb-5 h-fit w-full max-w-[800px] shadow-md lg:mb-10">
+            <div className="editor-inner min-h-[1100px] relative mb-5 h-fit w-full max-w-[800px] shadow-md lg:mb-10  bg-gradient-to-br from-black to-gray-900 border-slate-700 border-1">
               <RichTextPlugin
                 contentEditable={
                   <ContentEditable className="editor-input h-full" />

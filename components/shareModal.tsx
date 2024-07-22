@@ -49,7 +49,7 @@ const ShareModal = ({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
         <Button
-          className="gradient-blue flex h-9 gap-1 px-4"
+          className="bg-[#22B10C] shadow-2xl flex h-9 gap-1 px-4"
           disabled={currentUserType !== "editor"}
         >
           <Image
@@ -70,11 +70,11 @@ const ShareModal = ({
           </DialogDescription>
         </DialogHeader>
 
-        <Label htmlFor="email" className="mt-6 text-blue-100">
+        <Label htmlFor="email" className="mt-6 text-slate-400">
           Email address
         </Label>
-        <div className="flex items-center gap-3">
-          <div className="flex flex-1 rounded-md bg-dark-400">
+        <div className="flex items-center gap-3 ">
+          <div className="flex flex-1 rounded-md bg-black">
             <Input
               id="email"
               placeholder="Enter email address"
@@ -87,7 +87,7 @@ const ShareModal = ({
           <Button
             type="submit"
             onClick={shareDocumentHandler}
-            className="gradient-blue flex h-full gap-1 px-5"
+            className="bg-[#22B10C] flex h-full gap-1 px-5"
             disabled={loading}
           >
             {loading ? "Sending..." : "Invite"}
